@@ -1,10 +1,11 @@
 ## 
-## Function name	: makeCacheMatrix
-## Description		: It creates a list comprising of getters and setters and also other functions
-## 						1. set(x) - to set the value of the matrix
-## 						2. get() - to retrive the value of the matrix
-## 						3. setInverse(inverse) - to set the value of inverse
-## 						4. getInverse() - to get the value of the cached matrix inverse
+## Function name : makeCacheMatrix
+## Description : 
+## It creates a list comprising of getters and setters and also other functions
+## 1. set(x) - to set the value of the matrix
+## 2. get() - to retrive the value of the matrix
+## 3. setInverse(inverse) - to set the value of inverse
+## 4. getInverse() - to get the value of the cached matrix inverse
 ##
 
 makeCacheMatrix <- function(theMatrix = matrix()) {
@@ -31,9 +32,10 @@ makeCacheMatrix <- function(theMatrix = matrix()) {
 
 
 ##
-## Function name	: cacheSolve 
-## Description		: It computes the inverse of the special "matrix"
-## 					  created using makeCacheMatrix.
+## Function name : cacheSolve 
+## Description : 
+## It computes the inverse of the special "matrix"
+## created using makeCacheMatrix.
 ##
 
 cacheSolve <- function(theMatrix, ...) {
