@@ -2,32 +2,32 @@
 ## Function name : makeCacheMatrix
 ## Description : 
 ## It creates a list comprising of getters and setters and also other functions
-## 1. set(x) - to set the value of the matrix
-## 2. get() - to retrive the value of the matrix
-## 3. setInverse(inverse) - to set the value of inverse
-## 4. getInverse() - to get the value of the cached matrix inverse
+## set(x) - to set the value of the matrix
+## get() - to retrive the value of the matrix
+## setInverse(inverse) - to set the value of inverse
+## getInverse() - to get the value of the cached matrix inverse
 ##
 
 makeCacheMatrix <- function(theMatrix = matrix()) {
 	# Set inv to be NULL initially
-    inv <- NULL
+    	inv <- NULL
 	
 	# This functions assigns the value of x to theMatrix
-    set <- function(x) {
-    	theMatrix <<- x
-    	inv <<- NULL
-    }
+    	set <- function(x) {
+    		theMatrix <<- x
+    		inv <<- NULL
+    	}
 	
 	# This is for retriveing the value of theMatrix
-    get <- function() theMatrix
+    	get <- function() theMatrix
 	
 	# To assign the value of inverse
-    setInverse <- function(inverse) inv <<- inverse
+    	setInverse <- function(inverse) inv <<- inverse
 	
 	# To retrive the value of inverse
-    getInverse <- function() inv
+    	getInverse <- function() inv
 	
-    list(set=set, get=get, setInverse=setInverse, getInverse=getInverse)
+    	list(set=set, get=get, setInverse=setInverse, getInverse=getInverse)
 }
 
 
@@ -51,10 +51,10 @@ cacheSolve <- function(theMatrix, ...) {
     }
 	
 	# If the inverse has not been computed previously then compute it.
-    data <- theMatrix$get()
-    inv <- solve(data, ...)
+    	data <- theMatrix$get()
+    	inv <- solve(data, ...)
 	
 	# Set the inverse of the matrix.
-    theMatrix$setInverse(inv)
-    inv
+    	theMatrix$setInverse(inv)
+    	inv
 }
